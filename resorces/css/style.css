@@ -127,6 +127,37 @@ color: #e67e22;
 margin-bottom: 10px;
 }
 
+.small-icon {
+    color:#e67e22;
+    width: 30px;
+    font-size: 120%;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    /*secret to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/*=============================*/
+/*----------LINKS-------*/
+/*===============================*/
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    /* to back the underline to origin color i write ransparennt*/
+    border-bottom: 1px solid transparent;
+}
 
  /*=============================*/
 /*------------buttons-------*/
@@ -134,7 +165,8 @@ margin-bottom: 10px;
  /* this style for the btn when it is viseted and when t is not*/
 
  .btn:link,
- .btn:visited {
+ .btn:visited,
+input[type=submit]{
      /* it was inline , ichange it to inline block to add for it padding 
      and margine*/
      display: inline-block;
@@ -151,7 +183,8 @@ margin-bottom: 10px;
 
 
  .btn-full:link,
- .btn-full:visited {
+ .btn-full:visited,
+input[type=submit]{
      background-color: #e67e22;
      border: 1px solid #227de6;
     
@@ -164,12 +197,15 @@ margin-bottom: 10px;
  }
  
  .btn:hover,
- .btn:active {
+ .btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
      background-color: #cf6d17;
  }
 
  .btn-full:hover,
- .btn-full:active {
+ .btn-full:active,
+input[type=submit]{
     
      border: 1px solid #cf6d17;
     
@@ -193,6 +229,7 @@ margin-bottom: 10px;
     background-position: center;
     /*to make the photo show in all the page*/
     height: 100vh;
+    background-attachment: fixed;
 }
 
 .hero-text-box  {
@@ -344,6 +381,11 @@ margin-top: 70px;
     margin-right: 25px;
 
 }
+/* i did this things  coz this link has an effect with linkstyle*/
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
 
 .btn-app img {
     height: 50px;
@@ -352,4 +394,235 @@ margin-top: 70px;
     margin-top: 80px;
 }
 
+/*=============================*/
+/*----------CITIES-------*/
+/*===============================*/
 
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15%;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+
+/*=============================*/
+/*----------TEST-------*/
+/*===============================*/
+
+.section-test {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    /* to make the img fixed while the words move */
+    background-attachment: fixed;
+  
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+/* to add  qoution before text , to add any text we use content
+, and to add th quetion i go css tricks glyphs websit and take the
+code foe quetion mark*/
+blockquote::before{
+content: "\201C";
+font-size: 500%;
+/* make it block with its parent*/
+display: block;
+/* to can move the quotation we should put it in the absolute position
+and its parent in relative position coz if we didn't do that 
+it doesn't work*/
+position: absolute;
+top:-5px;
+left: -5px;
+}
+
+
+cite {
+    font-size: 90%;
+    margin-top: 50px;
+    /* i use display block to put all the pargraph in one place*/
+    display: block;
+}
+ cite img {
+     height: 50px;
+     border-radius: 50%;
+     margin-right: 10px;
+     /* to put he text in the same line with the photo*/
+     vertical-align: middle;
+ }
+
+ /*=============================*/
+/*----------SIGN UP------*/
+/*===============================*/
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width:90%;
+    /* to put in the center i add 5% coz the width 90% so it remains 
+    only 10%*/
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/* to put the btns int the center*/
+.plan-box div:last-child {
+    text-align: center;
+    /* to delete the border */
+    border: 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-meal{
+font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/*=============================*/
+/*---------------FORM-------*/
+/*===============================*/
+
+.section-form {
+    width:60%;
+    margin: 0 auto;
+}
+
+/* to specify that we need this input only i  write like this*/
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width:100%;
+    /* to make size of the input bigger (inside space|)*/
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* to make textarea bigger*/
+textarea {
+    height: 100px;
+}
+/* to ad space btween checkbox and the sentence*/
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+/*to delete the focus color when we click inside the inpt*/
+*:focus{outline:none }
+
+/*=============================*/
+/*--------------FOOTER-------*/
+/*===============================*/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float:right;
+}
+
+/* to put the li in one line i write display inline-bloke*/
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color:#ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%
+}
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    transition: color 0.2s;
+}
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+.ion-social-twitter:hover {
+    color:#00aced; 
+}
+.ion-social-googleplus:hover {
+    color: #dd4d39;
+}
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
